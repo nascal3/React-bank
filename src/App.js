@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {useReducer, useState} from "react";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
+import Nav from "./Nav";
 
 function App() {
     function reducer(state, action) {
@@ -43,6 +44,7 @@ function App() {
               </div>
           </div>
           <BrowserRouter>
+              <Nav></Nav>
               <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/dashboard" element={<Dashboard />} />
